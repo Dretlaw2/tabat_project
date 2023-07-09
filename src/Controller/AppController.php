@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\ArticleRepository;
 
 class AppController extends AbstractController
 {
@@ -15,8 +16,10 @@ class AppController extends AbstractController
     }
 
     #[Route('/blog', name: 'app_blog')]
-    public function blog(): Response
+    public function blog(ArticleRepository $articleRepository): Response
     {
-        return $this->render('blog/index.html.twig');
+        return $this->render('blog/index.html.twig', [
+            'articles' => $articleRepository->findBy([], ['date' => 'DESC'])
+        ]);
     }
 }
