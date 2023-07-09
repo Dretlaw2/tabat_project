@@ -1,0 +1,46 @@
+/* NAVIGATION */
+.navbar-brand {
+    font-size: 2rem;
+}
+
+#navbar {
+    font-size: 1.5em;
+    font-weight: 600; 
+}
+
+/* SECTION */
+
+section {
+    min-height: 800px; 
+    padding-top: 50px;
+}
+
+/* SECTION PRINCIPALE */
+
+#section-principale {
+    padding-top: 50px; 
+    min-height: 500px; 
+    background: url(../images/btp_chantier.jpeg);
+}
+
+
+.intro-message {
+    text-align: center; 
+    color: white; 
+    font-size: 3em; 
+}
+
+/* SECTION VALEURS */
+
+#section-valeurs {
+    min-height: 400px;
+}
+
+/*BAS DE PAGE : FOOTER*/
+
+#footer {
+    margin : 20px 0; 
+    font-size: 1.3em; 
+    background: transparent; 
+    border-color:transparent; 
+}
